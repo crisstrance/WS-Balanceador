@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
 			 vb.memory = 512
 			 vb.cpus = 2
 		 end
+		 balanceador.vm.provision "shell", inline: "sudo service apache2 restart", run: "always"
 	 end
 ###w1
 	 config.vm.define "w1" do |w1|
@@ -18,6 +19,7 @@ Vagrant.configure("2") do |config|
 			 vb.memory = 512
 			 vb.cpus = 2
 		 end
+		 #w1.vm.synced_folder "www/" , "/var/www"
 	 end
 ###w2
 	 config.vm.define "w2" do |w2|
@@ -28,5 +30,6 @@ Vagrant.configure("2") do |config|
 			 vb.memory = 512
 			 vb.cpus = 2
 		 end
+		 #w2.vm.synced_folder "www/" , "/var/www"
 	 end
 end
