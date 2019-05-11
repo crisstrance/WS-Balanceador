@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 	 config.vm.define "w1" do |w1|
 		 w1.vm.box = "hashicorp/precise64"
 		 w1.vm.hostname = "w1"
-		 wl.vm.network "private_network", ip:"192.168.18.9"
+		 w1.vm.network "private_network", ip:"192.168.18.9"
 		 w1.wm.provider "virtualbox" do |vb|
 			 vb.memory = 512
 			 vb.cpus = 2
