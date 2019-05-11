@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
 			 vb.cpus = 2
 		 end
 		 balanceador.vm.provision "shell", inline: "sudo service apache2 restart", run: "always"
+		 balanceador.vm.provision "shell", inline: "sudo apt-get update && apt-get -y upgrade", run: "always"
 	 end
 ###w1
 	 config.vm.define "w1" do |w1|
@@ -19,6 +20,7 @@ Vagrant.configure("2") do |config|
 			 vb.memory = 512
 			 vb.cpus = 2
 		 end
+		 w1.vm.provision "shell", inline: "sudo apt-get update && apt-get -y upgrade", run: "always"
 		 #w1.vm.synced_folder "www/" , "/var/www"
 	 end
 ###w2
@@ -30,6 +32,7 @@ Vagrant.configure("2") do |config|
 			 vb.memory = 512
 			 vb.cpus = 2
 		 end
+		 w2.vm.provision "shell", inline: "sudo apt-get update && apt-get -y upgrade", run: "always"
 		 #w2.vm.synced_folder "www/" , "/var/www"
 	 end
 end

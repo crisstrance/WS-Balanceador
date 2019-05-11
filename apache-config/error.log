@@ -1,0 +1,4 @@
+[Sat May 11 23:25:05 2019] [error] (113)No route to host: proxy: HTTP: attempt to connect to 192.168.18.9:80 (192.168.18.9) failed
+[Sat May 11 23:25:05 2019] [error] ap_proxy_connect_backend disabling worker for (192.168.18.9)
+[Sat May 11 23:25:08 2019] [error] (113)No route to host: proxy: HTTP: attempt to connect to 192.168.18.10:80 (192.168.18.10) failed
+[Sat May 11 23:25:08 2019] [error] ap_proxy_connect_backend disabling worker for (192.168.18.10)
